@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def page_index():
-    return candidates
+    return get_all()
 
 
 @app.route("/candidates/<uid>")

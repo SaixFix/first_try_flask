@@ -10,12 +10,12 @@ def load_candidates(file):
         return list_candidates
 
 
-def get_all(list):
+def get_all():
     """
     Читаем из списка кандидатов их имена, позиции и навыки, затем возвращаем их форматированной строкой
     """
     candidates = ""
-    for i in list:
+    for i in list_candidates:
         candidates += f"<pre>Имя: {i['name']} \nПозиция кандидата: {i['position']}\nНавыки кандидата: {i['skills']}\n " \
                       f"</pre> "
 
@@ -48,5 +48,4 @@ def get_by_skill(list, skill_name):
 
 
 list_candidates = load_candidates('candidates.json')
-candidates = get_all(list_candidates)
 
